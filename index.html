@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Próximamente</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0a0a0a;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(0, 128, 0, 0.35), transparent 40%),
+      radial-gradient(circle at 85% 25%, rgba(200, 0, 0, 0.35), transparent 40%),
+      radial-gradient(circle at 20% 85%, rgba(0, 60, 200, 0.35), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.12), transparent 40%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .container {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background: linear-gradient(90deg, #22c55e, #ffffff, #ef4444, #3b82f6);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 5s linear infinite;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+  }
+
+  .bar {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 2rem;
+  }
+
+  .bar span {
+    width: 40px;
+    height: 6px;
+    border-radius: 4px;
+  }
+
+  .bar span:nth-child(1) { background: #22c55e; }
+  .bar span:nth-child(2) { background: #ffffff; }
+  .bar span:nth-child(3) { background: #ef4444; }
+  .bar span:nth-child(4) { background: #3b82f6; }
+  .bar span:nth-child(5) { background: #111111; border: 1px solid #444; }
+
+  @keyframes shine {
+    to {
+      background-position: 300% center;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Próximamente</h1>
+    <div class="bar">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</body>
+</html>
